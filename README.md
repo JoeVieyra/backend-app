@@ -34,8 +34,8 @@ JWT_SECRET=supersecreto123
 ### para bd ejecutar archivo seed.js
 
 ```bash
-git clone https://github.com/tuusuario/backend-proyecto.git
-cd backend-proyecto
+git clone https://github.com/JoeVieyra/backend-app
+cd backend-app
 npm install
 
 
