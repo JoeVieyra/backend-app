@@ -33,7 +33,7 @@ router.post("/register", async (req, res) => {
 
 // Login
 router.post("/login", async (req, res) => {
-  const { email, password } = req.body;
+  const { nombre, email, password } = req.body;
 
   const user = await User.findOne({ email });
   if (!user) return res.status(400).json({ message: "Credenciales inválidas" });
@@ -42,7 +42,7 @@ router.post("/login", async (req, res) => {
   if (!match)
     return res.status(400).json({ message: "Credenciales inválidas" });
 
-  res.json({ message: "Login exitoso", userId: user._id });
+  res.json({ nombre:user.nombre, message: "Login exitoso", userId: user._id });
 });
 
 // Cambio de contraseña

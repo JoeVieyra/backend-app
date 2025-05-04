@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const authRoutes = require("./src/routes/auth");
 const uploadRoutes = require("./src/routes/upload");
+const colaboradorRoutes = require("./src/routes/colaboradores");
 
 const app = express();
 app.use(cors());
@@ -16,6 +17,7 @@ mongoose
 
 app.use("/api/auth", authRoutes);
 app.use("/api/files", uploadRoutes);
+app.use("/api/colaboradores", colaboradorRoutes);
 
 const PORT = 3000;
 app.listen(PORT, () => {
